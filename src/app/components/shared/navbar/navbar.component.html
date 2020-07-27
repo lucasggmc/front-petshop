@@ -1,0 +1,17 @@
+<div class="info-container">
+  <div class="info-item info-options-small"><i class="fas fa-bars"></i></div>
+  <div class="info-item">
+      <img src="../../assets/img/icon.png" height="40px;" class="info-logo-big">
+      <img src="../logo-small.svg" height="40px;" class="info-logo-small">
+  </div>
+  <div class="info-item info-big" [routerLink]="['/']" routerLinkActive="font-weight-bold">Produtos</div>
+  <div class="info-item info-big" [routerLink]="['/account/pets']" routerLinkActive="font-weight-bold">Meus Pets</div>
+  <div class="info-item info-big">Consultas</div>
+  <!-- <div class="info-item info-big">events</div>
+  <div class="info-item info-big">blogs</div> -->
+  <div class="info-item "></div>
+  <!-- vai ser o carrinho de compras -->
+  <div class="info-item info-cart" [routerLink]="['/cart']" routerLinkActive="font-weight-bold"><i class="fas fa-shopping-cart"></i></div>
+  <div class="info-item info-user"  [routerLink]="['/account']"><i class="far fa-user"></i> {{user?.name}}</div>
+  <div class="info-item info-logout"><i class="fa fa-power-off" (click)="logout()"></i></div>
+</div>

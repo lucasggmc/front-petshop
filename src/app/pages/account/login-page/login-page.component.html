@@ -1,0 +1,19 @@
+<div class="container-fluid container-login">
+    <app-loading *ngIf="busy"></app-loading>  
+  
+    <div class="box-login" *ngIf="!busy">           
+      
+    <form [formGroup]="form" >
+        <p class="p-header">Faça seu login</p>
+        <input type="text" class="form-control" formControlName="username" placeholder="CPF" mask="###.###.###-##"
+        [ngClass]="{'danger-test': (!form.controls.username.valid && !form.controls.username.pristine)}">
+        <input type="password" class="form-control" formControlName="password" placeholder="SENHA">
+       <button href="/" class="btn b-roxo " [disabled]="form.invalid" (click)="submit()" style="width: 100%;">ENTRAR</button>
+      </form>
+        
+      <a [routerLink]="['/signup']" class="p-footer">Quero me cadastrar</a>
+       <a [routerLink]="['/reset-password']" class="p-footer">Esqueci minha senha</a>
+       
+    </div>    
+</div>
+

@@ -1,0 +1,43 @@
+
+<!-- <body class="container-black"> -->
+<div *ngIf="cart?.items.length > 0" class="container">
+    <!-- <div class="container center-container">         -->
+            <div class="page-header">
+                <ul>
+                    <li><button class="btn b-roxo" (click)="clear()">LIMPAR CARRINHO</button></li>
+                </ul>                
+            </div>
+            <div class="row pet-card-item" *ngFor="let item of cart?.items">
+                <div class="col-lg-1 text-center">
+                    <img src="{{item.image}}" alt="{{item.product}}" width="64" height="64">                   
+                </div>
+                <div class="col-lg-7 text-center" style="margin-top: 15px;">
+                    <a href="#" class="pet-white">{{item.product}}</a><br>
+                </div>
+                <div class="col-lg-3 pet-white" style="margin-top: 15px;" title="Preço por unidade">
+                    {{item.price/100 | currency: 'BRL'}}
+                </div>
+                <div class="col-lg-1" style="margin-top: 15px;">
+                    <a class="pet-roxo float-right" (click)="remove(item)">
+                        <i class="fas fa-trash-alt pet-icon" title="Remover item"></i>
+                    </a>
+                </div>
+            </div>           
+            <div class="page-header">           
+                <ul>
+                    <li> <h5 class="pet-white">VALOR TOTAL: {{ total()/100 | currency: 'BRL'}}</h5></li>
+                    <li><button class="btn p-roxo">FINALIZAR COMPRA</button></li>                   
+                </ul>            
+            </div>            
+
+    <!-- </div> -->
+</div>
+<!-- carrinho vazio-->
+<div class="container text-center" *ngIf="cart?.items.length == 0">
+    <br>
+    <br>
+    <br>
+    <br>
+    <p> <em>Seu carrinho está vazio</em></p>
+</div>
+<!-- </body> -->

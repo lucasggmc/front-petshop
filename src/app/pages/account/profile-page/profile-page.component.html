@@ -1,0 +1,16 @@
+<div class="container-fluid container-login">
+    <app-loading *ngIf="busy"></app-loading>
+    <div class="box-login" *ngIf="!busy">
+        <form [formGroup]="form">
+            <p class="p-header">Dados do perfil</p>
+            <input type="text" class="form-control" placeholder="NOME" formControlName="name"
+                [ngClass]="{'danger-test': (!form.controls.name.valid && !form.controls.name.pristine)}">
+            <input type="text" class="form-control" placeholder="CPF" mask="###.###.###-##" formControlName="document"
+                [ngClass]="{'danger-test': (!form.controls.document.valid && !form.controls.document.pristine)}">
+            <input type="email" class="form-control" placeholder="E-MAIL" formControlName="email"
+                [ngClass]="{'danger-test': (!form.controls.email.valid && !form.controls.email.pristine)}">           
+
+            <button class="btn b-roxo" [disabled]="form.invalid" (click)="submit()" style="width: 100%;">SALVAR</button>
+        </form>       
+    </div>
+</div>

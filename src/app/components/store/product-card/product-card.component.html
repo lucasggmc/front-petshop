@@ -1,0 +1,14 @@
+<!-- <div class="card-body">
+        <p class="card-text">{{product.title}}.</p>        
+        <img src="{{product.images[0]}}" alt="" >
+        <h5 class="card-title">{{product.price/100 | currency: 'BRL'}}</h5>       
+        <a href="#" (click)="addToCart()" class="btn background-roxo">Adicionar</a>
+</div> -->
+
+
+<div class=" flexbox-product">
+        <p class="card-text flexbox-product-item">{{product.title}}.</p>        
+        <img src="{{product.images[0]}}" alt="" class="flexbox-product-item" style="flex-grow: 1;">
+        <h5 class="card-title flexbox-product-item">{{product.price/100 | currency: 'BRL'}}</h5>       
+        <a href="#" (click)="addToCart()" class="btn background-roxo flexbox-product-item teste">Adicionar</a>
+</div>
