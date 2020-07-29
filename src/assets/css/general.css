@@ -70,6 +70,7 @@ html, body{
 /* navbar */
 
 .info-container {
+    position: absolute;
     display: grid;
     width: 100%;
     /* background:rgb(25, 25, 25); */
