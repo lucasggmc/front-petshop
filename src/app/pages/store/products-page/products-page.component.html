@@ -3,8 +3,8 @@
     <app-loading></app-loading>
 </div>
 
-<div class="container" *ngIf="!busy">
-    <div class="row text-center" style="justify-content: center; padding-top: 100px;">
+<div class="container container-pages" *ngIf="!busy">
+    <div class="row text-center" style="justify-content: center;">
         <div class="card-product card col-lg-3" *ngFor="let product of products">
             <app-product-card [product]="product"></app-product-card>
         </div>

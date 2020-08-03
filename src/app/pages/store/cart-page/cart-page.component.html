@@ -1,6 +1,6 @@
 
 <!-- <body class="container-black"> -->
-<div *ngIf="cart?.items.length > 0" class="container">
+<div *ngIf="cart?.items.length > 0" class="container container-pages">
     <!-- <div class="container center-container">         -->
             <div class="page-header">
                 <ul>
@@ -33,11 +33,11 @@
     <!-- </div> -->
 </div>
 <!-- carrinho vazio-->
-<div class="container text-center" *ngIf="cart?.items.length == 0">
+<div class="container text-center container-pages" *ngIf="cart?.items.length == 0">
     <br>
     <br>
     <br>
     <br>
-    <p> <em>Seu carrinho está vazio</em></p>
+    <p class="pet-roxo"> <em>Seu carrinho está vazio</em></p>
 </div>
 <!-- </body> -->

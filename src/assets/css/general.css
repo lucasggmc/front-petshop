@@ -69,6 +69,10 @@ html, body{
 
 /* navbar */
 
+.container-pages{
+    padding-top: 100px;
+}
+
 .info-container {
     position: absolute;
     display: grid;
