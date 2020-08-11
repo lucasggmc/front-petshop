@@ -1,6 +1,7 @@
-# Petshop
+<a href=“https://mockoon.com/“>Mockoon</a>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
+# Petshop
+  ### To run this project it is necessary to download Mockoon and after that import the file inside the json folder into the application
 
 ## Development server
 
